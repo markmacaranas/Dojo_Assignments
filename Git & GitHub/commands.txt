@@ -1,0 +1,208 @@
+Last login: Sun Jan 22 17:26:22 on console
+Marks-MacBook-Air:~ markmacaranas$ 
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ cd..
+-bash: cd..: command not found
+Marks-MacBook-Air:~ markmacaranas$ cd~
+-bash: cd~: command not found
+Marks-MacBook-Air:~ markmacaranas$ mkdir [test]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	[test]
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ cd [test]
+Marks-MacBook-Air:[test] markmacaranas$ ls
+Marks-MacBook-Air:[test] markmacaranas$ touch
+usage:
+touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ...
+Marks-MacBook-Air:[test] markmacaranas$ ls
+Marks-MacBook-Air:[test] markmacaranas$ touch [index.html]
+Marks-MacBook-Air:[test] markmacaranas$ touch [styles.css]
+Marks-MacBook-Air:[test] markmacaranas$ touch [commands.txt]
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[styles.css]
+Marks-MacBook-Air:[test] markmacaranas$ cp [index.html] [index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[index_2.html]	[styles.css]
+Marks-MacBook-Air:[test] markmacaranas$ rm -i [styles.css]
+remove [styles.css]? Y
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[test]
+Marks-MacBook-Air:~ markmacaranas$ mkdir [destination]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ mv [index_2.html] [desination]
+mv: rename [index_2.html] to [desination]: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ mv [index_2.html] [test] [destination]
+mv: rename [index_2.html] to [destination]/[index_2.html]: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ mv index_2.html ../index_2.html<br>
+-bash: syntax error near unexpected token `newline'
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]
+Marks-MacBook-Air:~ markmacaranas$ mkdir [test]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ cd [test]
+Marks-MacBook-Air:[test] markmacaranas$ ls
+Marks-MacBook-Air:[test] markmacaranas$ touch [commands.txt]
+Marks-MacBook-Air:[test] markmacaranas$ touch [index.html]
+Marks-MacBook-Air:[test] markmacaranas$ touch [index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ mv index_2.html ../destination/index_2.html<br>
+-bash: syntax error near unexpected token `newline'
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ mv index_2.html ../destination/index_2.html
+mv: rename index_2.html to ../destination/index_2.html: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ cd [test]
+Marks-MacBook-Air:[test] markmacaranas$ mv index_2.html ../destination/index_2.html
+mv: rename index_2.html to ../destination/index_2.html: No such file or directory
+Marks-MacBook-Air:[test] markmacaranas$ mv index_2.html ../destination/index_2.html<br>
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]Ai[index.html]kmac[index_2.html]ex_2.html ../[desinationn/index_2.h
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ cd..
+-bash: cd..: command not found
+Marks-MacBook-Air:[test] markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ cd [test]
+Marks-MacBook-Air:[test] markmacaranas$ mv [test] test
+mv: rename [test] to test: No such file or directory
+Marks-MacBook-Air:[test] markmacaranas$ mv [test] test
+mv: rename [test] to test: No such file or directory
+Marks-MacBook-Air:[test] markmacaranas$ ls
+[commands.txt]	[index.html]	[index_2.html]
+Marks-MacBook-Air:[test] markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ pwd
+/Users/markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ mv test test
+mv: rename test to test: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ rm [test]
+rm: [test]: is a directory
+Marks-MacBook-Air:~ markmacaranas$ rm [destination]
+rm: [destination]: is a directory
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		[destination]	[test]
+Marks-MacBook-Air:~ markmacaranas$ rmdir [destination]
+rmdir: [destination]: Directory not empty
+Marks-MacBook-Air:~ markmacaranas$ rm -rf [destination]
+Marks-MacBook-Air:~ markmacaranas$ rm -rf [test]
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public
+Marks-MacBook-Air:~ markmacaranas$ touch test
+Marks-MacBook-Air:~ markmacaranas$ rm test
+Marks-MacBook-Air:~ markmacaranas$ mkdir test
+Marks-MacBook-Air:~ markmacaranas$ mkdir destination
+Marks-MacBook-Air:~ markmacaranas$ cd ..
+Marks-MacBook-Air:Users markmacaranas$ pwd
+/Users
+Marks-MacBook-Air:Users markmacaranas$ ls
+Guest		Shared		markmacaranas
+Marks-MacBook-Air:Users markmacaranas$ ls
+Guest		Shared		markmacaranas
+Marks-MacBook-Air:Users markmacaranas$ cd Desktop
+-bash: cd: Desktop: No such file or directory
+Marks-MacBook-Air:Users markmacaranas$ ls
+Guest		Shared		markmacaranas
+Marks-MacBook-Air:Users markmacaranas$ cd desktop
+-bash: cd: desktop: No such file or directory
+Marks-MacBook-Air:Users markmacaranas$ ls
+Guest		Shared		markmacaranas
+Marks-MacBook-Air:Users markmacaranas$ cd markmacaranas
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ cd test
+Marks-MacBook-Air:test markmacaranas$ touch index.html
+Marks-MacBook-Air:test markmacaranas$ touch styles.css
+Marks-MacBook-Air:test markmacaranas$ commands.txt
+-bash: commands.txt: command not found
+Marks-MacBook-Air:test markmacaranas$ cp [index.html] [index_2.html]
+cp: [index.html]: No such file or directory
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	styles.css
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	styles.css
+Marks-MacBook-Air:test markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ cp [index.html] [index_2.html]
+cp: [index.html]: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ cp index.html index_2.html
+cp: index.html: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ cd test
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	styles.css
+Marks-MacBook-Air:test markmacaranas$ cp index.html index_2.html
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	index_2.html	styles.css
+Marks-MacBook-Air:test markmacaranas$ rm styles.css
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	index_2.html
+Marks-MacBook-Air:test markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ cd test
+Marks-MacBook-Air:test markmacaranas$ ls
+index.html	index_2.html
+Marks-MacBook-Air:test markmacaranas$ touch commands.txt
+Marks-MacBook-Air:test markmacaranas$ ls
+commands.txt	index.html	index_2.html
+Marks-MacBook-Air:test markmacaranas$ mv index_2.html ../destination/index_2.html
+Marks-MacBook-Air:test markmacaranas$ ls
+commands.txt	index.html
+Marks-MacBook-Air:test markmacaranas$ cd destination
+-bash: cd: destination: No such file or directory
+Marks-MacBook-Air:test markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ cd destination
+Marks-MacBook-Air:destination markmacaranas$ ls
+index_2.html
+Marks-MacBook-Air:destination markmacaranas$ rm -rf destination
+Marks-MacBook-Air:destination markmacaranas$ ls
+index_2.html
+Marks-MacBook-Air:destination markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	test
+Marks-MacBook-Air:~ markmacaranas$ rm -rf destination
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ cd test
+Marks-MacBook-Air:test markmacaranas$ ls
+commands.txt	index.html
+Marks-MacBook-Air:test markmacaranas$ commands.txt
+-bash: commands.txt: command not found
+Marks-MacBook-Air:test markmacaranas$ ls
+commands.txt	index.html
+Marks-MacBook-Air:test markmacaranas$ cd commands.txt
+-bash: cd: commands.txt: Not a directory
+Marks-MacBook-Air:test markmacaranas$ 

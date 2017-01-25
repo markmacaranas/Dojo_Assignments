@@ -1,0 +1,176 @@
+Last login: Mon Jan 23 18:58:49 on ttys000
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures	test
+Marks-MacBook-Air:~ markmacaranas$ mkdir DojoAssignments
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	DojoAssignments	Movies		Public
+Desktop		Downloads	Music		test
+Documents	Library		Pictures
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	DojoAssignments	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ cd DojoAssignments
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch WebFundamentals
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch Python
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch MEAN
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch Ruby
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch iOS
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd MEAN
+-bash: cd: MEAN: Not a directory
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm MEAN
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm Python
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm Ruby
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm WebFundamentals
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm iOS
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	DojoAssignments	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ cd DojoAssignmentsls
+-bash: cd: DojoAssignmentsls: No such file or directory
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	DojoAssignments	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	DojoAssignments	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ cd DojoAssignments
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir WebFundamentals
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir Pyton
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rm Pyton
+rm: Pyton: is a directory
+Marks-MacBook-Air:DojoAssignments markmacaranas$ rmdir Pyton
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir Python
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir MEAN
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir Ruby
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir iOS
+Marks-MacBook-Air:DojoAssignments markmacaranas$ mkdir netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd MEAN
+Marks-MacBook-Air:MEAN markmacaranas$ ls
+Marks-MacBook-Air:MEAN markmacaranas$ touch about.txt
+Marks-MacBook-Air:MEAN markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:MEAN markmacaranas$ cd Python
+-bash: cd: Python: No such file or directory
+Marks-MacBook-Air:MEAN markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd Python
+Marks-MacBook-Air:Python markmacaranas$ touch about.txt
+Marks-MacBook-Air:Python markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:Python markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd Ruby
+Marks-MacBook-Air:Ruby markmacaranas$ touch about.txt
+Marks-MacBook-Air:Ruby markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:Ruby markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd WebFundamentals
+Marks-MacBook-Air:WebFundamentals markmacaranas$ touch about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd iOS
+Marks-MacBook-Air:iOS markmacaranas$ touch about.txt
+Marks-MacBook-Air:iOS markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd netCore
+Marks-MacBook-Air:netCore markmacaranas$ touch about.txt
+Marks-MacBook-Air:netCore markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:netCore markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd ..
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Desktop		Documents	DojoAssignments	Downloads	Library		Movies		Music		Pictures	Public		test
+Marks-MacBook-Air:~ markmacaranas$ cd DojoAssignments
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd iOS
+Marks-MacBook-Air:iOS markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:iOS markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:iOS markmacaranas$ cd ..
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+MEAN		Python		Ruby		WebFundamentals	iOS		netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd WebFundamentals
+Marks-MacBook-Air:WebFundamentals markmacaranas$ mkdir Git
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+Git		about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ mkdir HTML
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+Git		HTML		about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ mkdir CSS
+Marks-MacBook-Air:WebFundamentals markmacaranas$ mkdir Javascript
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd CSS
+Marks-MacBook-Air:CSS markmacaranas$ touch about.txt
+Marks-MacBook-Air:CSS markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd Git
+Marks-MacBook-Air:Git markmacaranas$ touch about.txt
+Marks-MacBook-Air:Git markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd HTML
+Marks-MacBook-Air:HTML markmacaranas$ touch about.txt
+Marks-MacBook-Air:HTML markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd Javascript
+Marks-MacBook-Air:Javascript markmacaranas$ touch about.txt
+Marks-MacBook-Air:Javascript markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd CSS
+Marks-MacBook-Air:CSS markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:CSS markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd Git
+Marks-MacBook-Air:Git markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:Git markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd HTML
+Marks-MacBook-Air:HTML markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:HTML markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd Javascript
+Marks-MacBook-Air:Javascript markmacaranas$ ls
+about.txt
+Marks-MacBook-Air:Javascript markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ s
+-bash: s: command not found
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ cd HTML
+Marks-MacBook-Air:HTML markmacaranas$ touch indentation.html
+Marks-MacBook-Air:HTML markmacaranas$ ls
+about.txt		indentation.html
+Marks-MacBook-Air:HTML markmacaranas$ ls -R
+about.txt		indentation.html
+Marks-MacBook-Air:HTML markmacaranas$ cd ..
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls
+CSS		Git		HTML		Javascript	about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ ls -R
+CSS		Git		HTML		Javascript	about.txt
+
+./CSS:
+about.txt
+
+./Git:
+about.txt
+
+./HTML:
+about.txt		indentation.html
+
+./Javascript:
+about.txt
+Marks-MacBook-Air:WebFundamentals markmacaranas$ 

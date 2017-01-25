@@ -1,0 +1,119 @@
+Last login: Tue Jan 24 05:22:06 on ttys000
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Downloads	Music		new_project
+Desktop		Library		Pictures	test
+Documents	Movies		Public
+Marks-MacBook-Air:~ markmacaranas$ cd Desktop
+Marks-MacBook-Air:Desktop markmacaranas$ ls
+Abalos, Joanna - Resume.docx
+DojoAssignments
+MySQL Workbench
+Screen Shot 2017-01-23 at 9.46.31 PM (2).png
+Screenshots
+learn_to_commit
+new_project
+test
+Marks-MacBook-Air:Desktop markmacaranas$ cd DojoAssignments
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Git & GitHub	MEAN		Ruby		iOS
+HTML 		Python		WebFundamentals	netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git init
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git commit -m "Added and commit changes"
+[master (root-commit) a9da4a2] Added and commit changes
+ 24 files changed, 982 insertions(+)
+ create mode 100644 Git & GitHub/Assignment II Learning to Commit
+ create mode 100644 Git & GitHub/Assignment MIT Terminus.png
+ create mode 100644 Git & GitHub/Terminal Basics Assignment 2 - Dojo Assignments.txt
+ create mode 100644 Git & GitHub/commands.txt
+ create mode 100644 HTML /GSW.jpeg
+ create mode 100644 HTML /Golden State Warriors.htm
+ create mode 100644 HTML /Golden State Warriors.html
+ create mode 100644 HTML /Golden State Warriors_files/GSW.jpeg
+ create mode 100644 HTML /Indentation Practice 1.html
+ create mode 100644 HTML /Indentation Practice 2.html
+ create mode 100644 HTML /Registration Form.html
+ create mode 100644 HTML /hello_world.html
+ create mode 100644 HTML /index.html
+ create mode 100644 MEAN/about.txt
+ create mode 100644 Python/about.txt
+ create mode 100644 Ruby/about.txt
+ create mode 100644 WebFundamentals/CSS/about.txt
+ create mode 100644 WebFundamentals/Git/about.txt
+ create mode 100644 WebFundamentals/HTML/about.txt
+ create mode 100644 WebFundamentals/HTML/indentation.html
+ create mode 100644 WebFundamentals/Javascript/about.txt
+ create mode 100644 WebFundamentals/about.txt
+ create mode 100644 iOS/about.txt
+ create mode 100644 netCore/about.txt
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git remote add origin https://github.com/theone2bballinu/DojoAssignments.git
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git push -u origin master
+Counting objects: 21, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (21/21), 787.25 KiB | 0 bytes/s, done.
+Total 21 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+^R
+gTo https://github.com/theone2bballinu/DojoAssignments.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Git & GitHub	MEAN		Ruby		iOS
+HTML 		Python		WebFundamentals	netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ touch readme.md
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Git & GitHub	MEAN		Ruby		iOS		readme.md
+HTML 		Python		WebFundamentals	netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd read.md
+-bash: cd: read.md: No such file or directory
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd readme.md
+-bash: cd: readme.md: Not a directory
+Marks-MacBook-Air:DojoAssignments markmacaranas$ ls
+Git & GitHub	MEAN		Ruby		iOS		readme.md
+HTML 		Python		WebFundamentals	netCore
+Marks-MacBook-Air:DojoAssignments markmacaranas$ cd readme.md
+-bash: cd: readme.md: Not a directory
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Git & GitHub/README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git add .
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git commit -m "add README.md"
+[master 9823b6e] add README.md
+ 1 file changed, 1 insertion(+)
+ create mode 100755 Git & GitHub/README.md
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git push
+To https://github.com/theone2bballinu/DojoAssignments.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/theone2bballinu/DojoAssignments.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git remote add origin https://github.com/theone2bballinu/DojoAssignments.git
+fatal: remote origin already exists.
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git push -u origin master
+To https://github.com/theone2bballinu/DojoAssignments.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/theone2bballinu/DojoAssignments.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Marks-MacBook-Air:DojoAssignments markmacaranas$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Marks-MacBook-Air:DojoAssignments markmacaranas$ 

@@ -1,0 +1,324 @@
+Last login: Mon Jan 23 23:56:13 on console
+Marks-MacBook-Air:~ markmacaranas$ ls
+Applications	Documents	Library		Music		Public		test
+Desktop		Downloads	Movies		Pictures	new_project
+Marks-MacBook-Air:~ markmacaranas$ cd Desktop
+Marks-MacBook-Air:Desktop markmacaranas$ mkdir test
+Marks-MacBook-Air:Desktop markmacaranas$ ls
+Abalos, Joanna - Resume.docx			Screen Shot 2017-01-23 at 9.46.31 PM (2).png	test
+DojoAssignments					Screenshots
+MySQL Workbench					new_project
+Marks-MacBook-Air:Desktop markmacaranas$ cd test
+Marks-MacBook-Air:test markmacaranas$ ls
+Marks-MacBook-Air:test markmacaranas$ touch index.html
+Marks-MacBook-Air:test markmacaranas$ touch styles.css
+Marks-MacBook-Air:test markmacaranas$ touch aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ ls
+aboutMe.txt	index.html	styles.css
+Marks-MacBook-Air:test markmacaranas$ git init
+Initialized empty Git repository in /Users/markmacaranas/Desktop/test/.git/
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git add .
+Marks-MacBook-Air:test markmacaranas$ git commit -"updated aboutMe"
+fatal: Invalid untracked files mode 'pdated aboutMe'
+Marks-MacBook-Air:test markmacaranas$ git commit -m "updated aboutMe"
+[master (root-commit) 6663f41] updated aboutMe
+ 3 files changed, 2 insertions(+)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git add .
+Marks-MacBook-Air:test markmacaranas$ git commit -m "added favorite movie to aboutMe"
+[master d4027d1] added favorite movie to aboutMe
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Marks-MacBook-Air:test markmacaranas$ git log
+commit d4027d19539766dd0dba604bf30969ee040bb40b
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:21:07 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit 6663f4181d0af94361e732ed62c0bddd9d97bdd6
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:19:18 2017 -0800
+
+    updated aboutMe
+Marks-MacBook-Air:test markmacaranas$ git revert -m "revert d4027d19539766dd0dba604bf30969ee040bb40b"
+error: switch `m' expects a numerical value
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <n>    parent number
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Marks-MacBook-Air:test markmacaranas$ git revert -n "revert d4027d1"
+fatal: bad revision 'revert d4027d1'
+Marks-MacBook-Air:test markmacaranas$ git revert -n "revert d4027d19539766dd0dba604bf30969ee040bb40b"
+fatal: bad revision 'revert d4027d19539766dd0dba604bf30969ee040bb40b'
+Marks-MacBook-Air:test markmacaranas$ git revert -n HEAD
+Marks-MacBook-Air:test markmacaranas$ git revert -n d4027d19539766dd0dba604bf30969ee040bb40b
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert d4027d19539766dd0dba604bf30969ee040bb40b"
+[master eaf25fb] revert d4027d19539766dd0dba604bf30969ee040bb40b
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert 6663f4181d0af94361e732ed62c0bddd9d97bdd6"
+On branch master
+nothing to commit, working tree clean
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert d4027d19539766dd0dba604bf30969ee040bb40b"
+On branch master
+nothing to commit, working tree clean
+Marks-MacBook-Air:test markmacaranas$ git log
+commit eaf25fb909c07fadec5b68a2d8a8cee405c79c89
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:38:30 2017 -0800
+
+    revert d4027d19539766dd0dba604bf30969ee040bb40b
+
+commit d4027d19539766dd0dba604bf30969ee040bb40b
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:21:07 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit 6663f4181d0af94361e732ed62c0bddd9d97bdd6
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:19:18 2017 -0800
+
+    updated aboutMe
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert eaf25fb909c07fadec5b68a2d8a8cee405c79c89"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert eaf25f9"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert d4027d19539766dd0dba604bf30969ee040bb40b"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Marks-MacBook-Air:test markmacaranas$ git log
+commit eaf25fb909c07fadec5b68a2d8a8cee405c79c89
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:38:30 2017 -0800
+
+    revert d4027d19539766dd0dba604bf30969ee040bb40b
+
+commit d4027d19539766dd0dba604bf30969ee040bb40b
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:21:07 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit 6663f4181d0af94361e732ed62c0bddd9d97bdd6
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:19:18 2017 -0800
+
+    updated aboutMe
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git log
+commit eaf25fb909c07fadec5b68a2d8a8cee405c79c89
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:38:30 2017 -0800
+
+    revert d4027d19539766dd0dba604bf30969ee040bb40b
+
+commit d4027d19539766dd0dba604bf30969ee040bb40b
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:21:07 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit 6663f4181d0af94361e732ed62c0bddd9d97bdd6
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:19:18 2017 -0800
+
+    updated aboutMe
+Marks-MacBook-Air:test markmacaranas$ git reverrt -n HEAD
+git: 'reverrt' is not a git command. See 'git --help'.
+
+Did you mean this?
+	revert
+Marks-MacBook-Air:test markmacaranas$ Y
+-bash: Y: command not found
+Marks-MacBook-Air:test markmacaranas$ git revert -n HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	aboutMe.txt
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git revert -n HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	aboutMe.txt
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+Marks-MacBook-Air:test markmacaranas$ git commit -m "aboutMe"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Marks-MacBook-Air:test markmacaranas$ git add .
+Marks-MacBook-Air:test markmacaranas$ git commit -m 
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+Marks-MacBook-Air:test markmacaranas$ git commit -m "aboutMe"
+[master 88c6cbf] aboutMe
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Marks-MacBook-Air:test markmacaranas$ git revert -n HEAD
+Marks-MacBook-Air:test markmacaranas$ git log
+commit 88c6cbf1824b2d259348194621ccf0546539ed7c
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:51:54 2017 -0800
+
+    aboutMe
+
+commit eaf25fb909c07fadec5b68a2d8a8cee405c79c89
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:38:30 2017 -0800
+
+    revert d4027d19539766dd0dba604bf30969ee040bb40b
+
+commit d4027d19539766dd0dba604bf30969ee040bb40b
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:21:07 2017 -0800
+
+    added favorite movie to aboutMe
+
+commit 6663f4181d0af94361e732ed62c0bddd9d97bdd6
+Author: Mark Macaranas <markmacaranas@gmail.com>
+Date:   Tue Jan 24 00:19:18 2017 -0800
+
+    updated aboutMe
+Marks-MacBook-Air:test markmacaranas$ git revert -n commit 88c6cbf1824b2d259348194621ccf0546539ed7c
+fatal: bad revision 'commit'
+Marks-MacBook-Air:test markmacaranas$ git revert -n 88c6cbf1824b2d259348194621ccf0546539ed7c
+Marks-MacBook-Air:test markmacaranas$ git add .
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert 88c6cbf1824b2d259348194621ccf0546539ed7c"
+[master a841c68] revert 88c6cbf1824b2d259348194621ccf0546539ed7c
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Marks-MacBook-Air:test markmacaranas$ vim aboutMe.txt
+Marks-MacBook-Air:test markmacaranas$ git commit -m 
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert 88c6cbf1824b2d259348194621ccf0546539ed7c"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Marks-MacBook-Air:test markmacaranas$ git add .
+Marks-MacBook-Air:test markmacaranas$ git commit -m "revert 88c6cbf1824b2d259348194621ccf0546539ed7c"
+[master f9202eb] revert 88c6cbf1824b2d259348194621ccf0546539ed7c
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Marks-MacBook-Air:test markmacaranas$ git remote add origin https://github.com/theone2bballinu/Learning-to-Commit-Assignment.git
+

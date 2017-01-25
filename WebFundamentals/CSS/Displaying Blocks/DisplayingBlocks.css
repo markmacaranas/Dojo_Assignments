@@ -1,0 +1,49 @@
+.above{
+  margin: auto;
+  position: relative;
+  left: 50px;
+}
+
+
+header *{
+  display:inline;
+  position: relative;
+}
+
+header img{
+  height: 50px;
+  width: 75px;
+  display: inline-block;
+  position: inherit;
+}
+
+body{
+  height: 1000px;
+  width: 1000px;
+  margins: auto;
+  paddings: auto;
+}
+
+table img{
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  display: inline;
+  border: 5px solid black;
+
+}
+
+div{
+  background-color: beige;
+  height: 650px;
+  width: 700px;
+}
+
+.pic{
+  background-color:#42c2f4;
+  padding: 5px;
+}
+
+.pic1{
+  background-color:#f4426e;
+}
