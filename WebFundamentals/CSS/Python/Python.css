@@ -1,0 +1,113 @@
+.container{
+  background-color: #22366b;
+  height: 1000px;
+  width: 100%;
+  display: block;
+}
+
+header{
+  display: inline-block;
+  background-color: green;
+  width: 100%;
+}
+
+header img{
+  background-color:orange;
+}
+
+.search{
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  background-color: red;
+  width: 68%;
+  border radius: 30px;
+}
+
+.homebar{
+  background-color: yellow;
+  list-style: none;
+  text-align: center;
+  vertical-align: top;
+  height: 50px;
+  width: 70%;
+  margin: 0 auto;
+  border radius: 100px;
+}
+
+.homebar ul li{
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: -8px 40px;
+}
+
+ol li{
+  list-style: none;
+  color: white;
+  list-style-position: inside;
+  display: block;
+}
+
+.Docs{
+  text-indent: 25px;
+}
+
+main{
+  background-color: brown;
+  height: 1500px;
+  width: 100%;
+  display: inline-block;
+}
+.sidebar{
+  display: inline-block;
+  width:35%;
+  background: blue;
+  padding: 0px 0px 0px 200px;
+}
+
+.sidebar ol li{
+  margin=0px 0px 0px 200px;
+}
+
+.content{
+  display:inline-block;
+  color: orange;
+  background: pink;
+  list-style: none;
+  width: 30%;
+  height: 235px;
+  vertical-align: top;
+  text-align: center;
+  list-style: none;
+  padding: 40px;
+}
+
+.py{
+  list-style: none;
+}
+.zen{
+  color: white;
+  font-size: 24px;
+}
+
+.decoration{
+  background: blue;
+  height: 5px;
+  width: 360px;
+  display: relative;
+  left: 200px;
+}
+
+.decorate{
+  background: blue;
+  height: 5px;
+  width: 360px;
+  display: relative;
+  left: 100px;
+}
+
+.bullets{
+  display:inline-block;
+  background-color: yellow;
+}

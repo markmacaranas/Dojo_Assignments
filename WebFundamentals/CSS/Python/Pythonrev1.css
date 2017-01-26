@@ -1,0 +1,30 @@
+main{
+  background-color: red;
+}
+
+.tophead{
+  background-color: blue;
+}
+
+
+.textsize{
+  color:white;
+  display: inline-block;
+}
+
+.size{
+  color:orange;
+}
+
+.nav{
+  list-style: none;
+}
+
+.sidebar{
+}
+
+.beautiful{
+  display: inline-block;
+  text-align: center;
+  list-style: none;
+}
