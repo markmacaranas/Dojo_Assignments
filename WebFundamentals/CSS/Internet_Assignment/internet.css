@@ -1,0 +1,220 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0 0 0px 0px;
+	}
+html, body{
+	height: 100%;
+	width: 960px;
+}
+.container{
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to top, white,white,beige);
+}
+header{
+	height: 15%;
+}
+header div{
+	height: 50%;
+}
+.headertop {
+	background-color: white;
+}
+.headertop img{
+	height: 50px;
+}
+.headertop h1{
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0 0 0 0;
+}
+.headertop img, h1{
+	display: inline-block;
+}
+.headerbottom{
+	background: linear-gradient(blue,blue,gray,blue,blue);
+}
+.headerbottom h2{
+	font weight: bold;
+	font-size: 30px;
+	color: white;
+	margin: 6px 0 0px 22px;
+}
+.sidebar{
+	width: 20%;
+	height: 80%;
+	display: inline-block;
+}
+.sidebar-1{
+	height: 20%;
+	padding: 4px;
+}
+.sidebar-1 h3{
+	font-weight: bold;
+}
+.sidebar-2{
+	height: 15%;
+}
+.sidebar-2 input{
+	border: 2px solid black;
+	border-radius: 5px;
+	height: 40px;
+	width: 185px;
+	display: block;
+	color: white;
+	box-shadow: 1px 1px 1px black;
+}
+input:first-child{
+	background-color: blue;
+}
+input:nth-child(2){
+	background-color: orange;
+	margin-top: 5px;
+}
+.sidebar-3{
+	height: 5%;
+	text-align: center;
+}
+.sidebar-3 div{
+	height: 2px;
+	background-color: gray;
+	margin-top: 13px;
+}
+.sidebar-4{
+	height: 47%;
+	width: 101%;
+	background-image:url("internet_images/ad_background.png");
+	text-align: center;
+}
+.sidebar-4 img{
+	width: 100px;
+	height: 140px;
+}
+.sidebar-4 p{
+	color: white;
+	font-size: 20px;
+}
+.sidebar-4 *{
+	margin-bottom: 15px;
+	padding-top: 5px;
+}
+.sidebar-4 input{
+	border-radius: 5px;
+	background-color:teal;
+	color: white;
+}
+.maincontent{
+	display: inline-block;
+	width: 78%;
+	height: 80%;
+	vertical-align: top;
+}
+.maincontent-1{
+	height: 10%;
+	width: 100%
+	display: inline-block;
+	border-bottom: 2px solid gray;
+}
+.maincontent-1 div {
+	height: 100%;
+	width: 48%;
+	display: inline-block;
+}
+
+.maincontent-1 h4{
+	width: 30%;
+	display: inline-block;
+}
+.maincontent-1 h1{
+	color: blue;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: right;
+}
+.maincontent-1 h5{
+	font-size: 12px;
+}
+.rightbox {
+	vertical-align: top;
+	text-align: right;
+}
+.rightbox img{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin-top: 20px;
+}
+.trouble{
+	vertical-align: top;
+	margin:  0 0 0 0;
+}
+.trouble2{
+	width: 300px;
+	margin: 0 -19px 0 0;
+	text-align:left;
+	padding: 0 0 0 0;
+}
+.leftbox img{
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	vertical-align: top;
+}
+.maincontent-2{
+	height: 30%;
+	padding: 5px;
+}
+.maincontent-2 li {
+	font-size: 12px;
+	margin: 5px;
+}
+.maincontent-3{
+	height: 15%;
+	text-align: center;
+}
+.maincontent-3 img {
+	height: 100%;
+}
+.maincontent-4{
+	height:25%;
+	padding: 5px;
+}
+.maincontent-4 li{
+	font-size: 12px;
+}
+.maincontent-5{
+	height: 15%;
+	border-left: 3px solid blue;
+	border-top: 3px solid blue;
+	border-right: 3px solid blue;
+}
+.maincontent-5 div {
+	display: inline-block;
+	margin: 0 0 0 0;
+}
+.footleft img{
+	height: 100px;
+	width: 100px;
+}
+.footleft{
+	height: 100%;
+	width: 20%;
+	margin: 0 0 0 0;
+}
+.footright{
+	height: 100%;
+	width: 68%;
+	margin: 0 0 0 0;
+	vertical-align: top;
+}
+.red{
+	color: red;
+}
