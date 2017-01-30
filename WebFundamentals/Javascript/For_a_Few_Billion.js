@@ -9,7 +9,7 @@ for(var i = 1; i <= 30; i++){
     reward += pay;
     pay *= 2;
 
-    console.log(reward);
+    console.log("The reward after 30 days is " + reward );
   }
 }
 reward30Days();
@@ -25,7 +25,7 @@ var day = 0;
     pay *= 2;
     day++;
       }
-      console.log(day);
+      console.log("It would take the servant " + day + " days to make $10,000!");
  }
 daysTo10000();
 // The servant would make $10,000 in 20 days!
@@ -39,8 +39,8 @@ var day = 0;
     reward += pay;
     pay *= 2;
     day++;
-      } 
-      console.log(day);
+      }
+      console.log("It would take the servant " + day + " days to make a billion!");
  }
 daysToBillion();
 // The servant would make $1,000,000,000 in 37 days!
@@ -55,8 +55,7 @@ var day = 0;
     pay *= 2;
     day++;
       }
-      console.log(day);
-      console.log("testing");
+      console.log("It would take the servant " + day + "days to make infinite money!");
  }
 daysToInfinity();
 // The servant would make infinity money for 1,031 days!
