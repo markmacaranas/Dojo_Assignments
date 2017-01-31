@@ -19,11 +19,9 @@ var students = [
      {first_name : 'John', last_name : 'Rosales'},
      {first_name : 'Mark', last_name : 'Guillen'},
      {first_name : 'KB', last_name : 'Tonel'}
-]
-        console.log(students[0].first_name, students[0].last_name);
-        console.log(students[1].first_name, students[1].last_name);
-        console.log(students[2].first_name, students[2].last_name);
-        console.log(students[3].first_name, students[2].last_name);
+   ]
+      for(var i = 0; i < students.length; i++){
+        console.log(students[i].first_name, students[i].last_name);
+      }
 }
-
 studentsAndInstructors();
