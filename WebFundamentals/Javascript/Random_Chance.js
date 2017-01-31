@@ -36,7 +36,7 @@ function slot (quarters, x) {
       else{
                 while (quarters > 0) {
                     if (Math.floor((Math.random() * 100) + 1) == 10) {
-                      console.log("You won");
+                      console.log("You won")
                       quarters += Math.floor((Math.random() * 51) + 50);
                       console.log(quarters)
                       break;
@@ -48,4 +48,4 @@ function slot (quarters, x) {
             }
       }
 }
-slot(200);
+slot(1000);
