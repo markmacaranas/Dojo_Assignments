@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <meta name="Contact Card" contact="jQuery Assignment for Coding Dojo" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      label{
+        display: block;
+      }
+      textarea{
+        display: block;
+      }
+      .form-area{
+        border: 2px solid black;
+        height: 250px;
+        width: 500px;
+        padding: 10px;
+        display: inline-block;
+      }
+      .card-area{
+        vertical-align: top;
+        display: inline-block;
+      }
+      body div{
+        background-color: white;
+      }
+      #cards{
+        border: 2px solid black;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="Contact Card.js" defer></script>
+    <script>
+      $(document).ready(function(){
+
+        $('form').submit(function(){
+            $(".card-area").append("<div id='cards'>" + $("#first-name").val() + $("#last-name").val() + $("#description-input").val() + "</div");
+            return false;
+
+        $(document).on(".click","btn")
+            $("card-area")
+
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <div class="form-area">
+      <form class="contact-input" action="test.html" method="post">
+          <label>First Name: <input type="text" id="first-name" value=""></label>
+          <label>Last Name: <input type="text" id="last-name" value=""></label>
+          <p>Description:</p>
+          <textarea id="description-input" name="description" rows="8" cols="80"></textarea>
+          <input type="submit" value="Add Card" />
+      </form>
+    </div>
+    <div class="card-area">
+    </div>
+  </body>
+</html>
