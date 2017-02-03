@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        $('form').submit(function() {
+          // your code here (build up your url)      <!--http://api.openweathermap.org/data/2.5/weather?q=California,us%appid=252359266a06b5a9166765bd0f946c2a
+          console.log("loading...");
+          var searchCity = $("input").val();
+          $.get("http://api.openweathermap.org/data/2.5/weather?q="+searchCity+"&&appid=b42c3737912d580de10127dcdd211989", function(res) {
+              console.log(res);
+              $(".api").html("<h1>"+res.name+"</h1><h3>Temperature: "+Math.trunc(res.main.temp * 9/5 - 459.67)+" Degrees Fahrenheit</h3>")
+                  // your code here
+          }, 'json');
+              // don't forget to return false so the page doesn't refresh
+              return false;
+        });
+      });
+
+    </script>
+    <style>
+      body input{
+        width: 200px;
+      }
+      .api{
+        width: 60%;
+        height:600px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form>
+    <div class="searchbar">
+      <input type="search" name="search" value="Search"/>
+      <input type="submit" name="Search Weather" />
+    </div>
+    <div class="api">
+
+    </div>
+    </form>
+  </body>
+</html>
