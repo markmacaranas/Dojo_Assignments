@@ -1,0 +1,10 @@
+
+
+pip install Django :  installation of Django using pip
+pip list: list installed packages
+pip install Django: command to install Django. The information was showing the installation of Django in the terminal.
+pip freeze (What's the difference between freeze and list?) Output installed packages in requirements format. The difference between pip list and pip freeze is that pip list shows a list of installed packages in the computer and pip freeze shows a list of packages that you want to maybe uninstall.
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file? I see a list of folders//files in my Desktop which is also in the requirements.txt file.
+pip uninstall Django: uninstall the Django package.
+pip show Django: gives the properties of the Django package.
+pip search Flask: searches for the Flask package and lists the files in the Flask package.

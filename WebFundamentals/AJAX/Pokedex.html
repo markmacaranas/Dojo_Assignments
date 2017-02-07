@@ -11,7 +11,7 @@
                 }
             }
             function gen_img_handlers(){
-              $('img').click(function(){  <!--//When someone clicks on the img, anything with the variable pokemont will be given an attribute: id-->
+              $('img').click(function(){  <!--//When someone clicks on the img, anything with the variable pokemon will be given an attribute: id-->
                   console.log("loading");
                   var pokemon = $(this).attr('id');
                   $.get('http://pokeapi.co/api/v1/pokemon/'+pokemon+'/', function(res){
