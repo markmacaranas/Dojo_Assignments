@@ -1,0 +1,46 @@
+FLASK TEMPLATES
+
+With our Flask templates, there are 2 special inputs that we can use to insert python code.
+
+{{ some variable }}
+{% some expression %}
+Let's see this in action. First, create a new project folder called test_templates.  Place a server.py file and a templates folder inside this folder.
+
+This is how our server.py will look:
+
+from flask import Flask, render_template
+app = Flask(__name__)
+@app.route('/')
+def index():
+  return render_template("index.html", phrase="hello", times=5)
+app.run(debug=True)
+Now in your templates folder, create a file and call it index.html:
+
+<html>
+    <head>
+      <title>My First Template</title>
+    </head>
+    <body>
+      <h3>My first flask template with embedded python</h3>
+      <!-- this will output the value of our phrase variable -->
+      <p>Phrase: {{ phrase }}</p>
+
+      <!-- this will output the value of our times variable -->
+      <p>Times: {{ times }}</p>
+
+      <!-- here is an example of embedding a for-loop in our code -->
+      {% for x in range(0,times): %}
+      <p>{{ phrase }}</p>
+      {% endfor %}
+
+      <!-- here is an example of embedding an if statement in our code -->
+      {% if phrase == "hello" %}
+ <p>The phrase says hello</p>
+      {% endif %}
+    </body>
+</html>
+In the above code, we used the different embedding tags to output some of our variables, insert a for-loop, and do some conditional checking with an if statement in our HTML template. It's especially important to see how we used the values that we passed into our template from our server file in the embedding tags.
+
+These tags allow us to control what gets rendered (if statements), how many times something gets rendered (for loop) and printing values to our rendered html.
+
+As we've been learning a little bit about templates, what we actually have been using is a template engine called Jinja2.  Jinja2 has a lot of cool built in features that allow us to place dynamic information on HTML pages.  Check out the template documentation here: Jinja2 Template Docs

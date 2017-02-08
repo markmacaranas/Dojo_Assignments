@@ -1,0 +1,28 @@
+Static Files
+
+Every framework will have its own way of serving static content. We'll do so by creating a folder inside of each of our projects labeled  static. This static folder will be used to serve all of your static content (stylesheets, images, JavaScript files, etc.)!
+
+Now say we placed a CSS file, a  JavaScript file, and image directly into our static folder, we can then access them in our HTML templates like so:
+
+<!-- linking a css style sheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style_sheet.css') }}">
+<!-- linking a javascript file -->
+<script type="text/javascript" src="{{ url_for('static', filename='my_script.js') }}"></script>
+<!-- linking an image -->
+<img src="{{ url_for('static', filename='my_img.png') }}">
+Flask is configured to automatically look inside the static folder to look for our static content which makes it so easy!
+
+Organization
+Typically,  inside the static folder, we will create a few more folders to organize our static files. We can call them css, js, and img and house the corresponding files in the different folders. We can reflect these changes in our previous tags with the following changes in the href/src attributes, notice how we slightly changed the file name in the url_for function:
+
+<!-- linking a css style sheet -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style_sheet.css') }}">
+<!-- linking a javascript file -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+<!-- linking an image -->
+<img src="{{ url_for('static', filename='img/my_img.png') }}">
+A couple things to note
+All static content must go inside of the static folder
+The folder must be named static
+In order to reference the static content start at the relative path after static(static is from the root(also know as / or the same level as your hello.py file
+For example, if you have styles.css inside of the static folder your href would read "href='static/styles.css'"
