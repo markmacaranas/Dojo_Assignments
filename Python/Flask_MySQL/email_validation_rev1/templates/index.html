@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Email Validation</title>
+		<!-- Compiled and minified CSS -->
+		<link href="http://fonts.googleapis.com/icon?family=Marterial+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = "styles.css")}}" />
+	</head>
+	<body>
+		{% with messages = get_flashed_messages() %}
+        	{% if messages %}
+            	{% for message in messages %}
+                	<h4>{{message}}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+		<div class="container">
+		</div>
+		<h1>Email Validations</h1>
+
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		{% for message in messages %}
+		<p>
+			{{message}}
+		</p>
+		{% endfor %}
+		{% endif %}
+		{% endwith %}
+		<form action="/process" method="post">
+			<label for="email">Email:</label>
+			<input type="text" name="email" />
+			<button class="btn" type="submit">Submit</button>
+		</form>
+	</body>
+</html>
