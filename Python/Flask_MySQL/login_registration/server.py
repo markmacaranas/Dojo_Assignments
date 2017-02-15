@@ -1,31 +1,108 @@
-from flask import Flask, request, redirect, render_template, session, flash
+from flask import Flask, render_template, session, request, redirect, flash
 from mysqlconnection import MySQLConnector
+from flask.ext.bcrypt import Bcrypt
+import re
+EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 app = Flask(__name__)
-app.secret_key = 'loginregistration'
-mysql = MySQLConnector(app, 'login_reg')
+bcrypt = Bcrypt(app)
+app.secret_key = 'loginXYZ'
+mysql = MySQLConnector(app, 'email_validation')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    all_users = mysql.query_db("SELECT * FROM users")
+    return render_template('index.html', all_users = all_users)
 
-@app.route('/email', methods=['POST'])
-def check():
-    if not EMAIL_REGEX.match(request.form['email']):
-        flash('Email is not valid!')
-        return redirect('/')
-    else:
-        flash('The email address you entered ' + request.form['email'] + ' is a VALID email address! Thank you!')
-        query = "INSERT INTO emails (email,created_at) VALUES (:email, NOW())"
-        data = {
-            'email': request.form['email']
-            }
-        mysql.query_db(query, data)
-        return redirect('/success')
+@app.route('/login', methods=['POST'])
+def login():
+    all_users = mysql.query.db("SELECT * FROM users")
+    for i in all_users:
+        if i['email'] == request.form['email']:
+            print "email match"
+            if bcrypt.check_password_hash(i['password'], request.form['password'])
+                print "password match"
+                session['id'] = i['id']
+                return redirect ('/success')
+    flash("Your user info does not match our database. Please try again.")
+    return redirect('/')
 
 @app.route('/success')
 def success():
-    query = "SELECT * FROM emails"
-    emails = mysql.query_db(query)
-    return render_template('success.html', all_emails=emails)
+    if "id" in session:
+        return render_template('success.html')
+    else:
+        flash("Please log in to continue.")
+        return redirect('/')
+
+@app.route('/log_out')
+def log_out():
+    session.pop('id')
+    flash("You have not logged out. Please log out!")
+    return redirect('/')
+
+@app.route('/registration')
+def registration():
+    return render_template("registration.html")
+
+@app.route('/process', methods=['post'])
+def create_user():
+    print "created user"
+    error = 0
+
+    def hasNumbers(inputString):
+    return any(char.isdigit() for char in inputString)
+    #The above function is a helper function
+
+    if len(request.form['email']) == 0:
+        flash("Please insert a valid email address.")
+        error = 1
+    elif not EMAIL_REGEX.match(request.form['email']):
+        flash("That email address is invalid. Please try again.")
+        error = 1
+    else:
+        all_users = mysql.query_db("SELECT * FROM users")
+        for i in all_users:
+            if i['email'] == request.form['email']:
+                flash("That email address is already taken. Please choose a unique email address.")
+                error = 1
+
+    if len(request.form["first_name"]) < 2:
+        flash("Please insert your first name.")
+        error = 1
+    elif hasNumbers(request.form['first_name']) == True:
+        flash("Please remove all numbers from your first name.")
+        error = 1
+
+    if len(request.form['last_name']) < 2:
+        flash("Please insert your last name.")
+        error = 1
+    elif hasNumbers('request.form['last_name']') == True:
+        flash("Please remove all numbers from your last name.")
+        error = 1
+
+    if len(request.form['password']) == 0:
+        flash("Please create a password")
+        error = 1
+    elif len(request.form['password']) < 8:
+        flash("Please create a password with 8 or more characters.")
+        error = 1
+    elif (request.form['password']) != (request.form["confirm"]):
+        flash("Please verify that both password fields match")
+        errors = 1
+
+    if error == 0:
+        insert_query = "INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (:first_name, :last_name, :email, :password, NOW(), NOW())"
+        data = {
+            "first_name":request.form["first_name"],
+            "last_name":request.form["last_name"],
+            "email":request.form["email"],
+            "password":bcrypt.generate_password_hash(request.form['password'])
+        }
+        logged_id = mysql.query_db(insert_query, data)
+        session['id'] = logged_id
+        return redirect('/success')
+
+    print "finished /process"
+    return redirect("/registration")
 
 app.run(debug=True)
