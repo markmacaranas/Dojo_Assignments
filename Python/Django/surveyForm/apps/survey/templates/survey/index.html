@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Survey Form</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'survey/css/style.css' %}"/>
+	</head>
+	<body>
+		<form action="/process" method="post">
+			{% csrf_token %}
+		<div>
+			<p>Your Name: <input for="Your Name" type="text" name="name"/></p>
+			<p>Dojo Location:
+				<select name="location">
+						<option value="Seattle">Seattle</option>
+						<option value="San Jose">San Jose</option>
+						<option value="Los Angeles">Los Angeles</option>
+						<option value="Dallas">Dallas</option>
+						<option value="Washington DC">Washington DC</option>
+						<option value="Chicago">Chicago</option>
+						<option value="Berkeley">Berkeley</option>
+						<option value="Orange County">Orange County</option>
+				</select>
+			</p>
+			<p>Favorite Language:
+				<select name="language">
+						<option value="Web Fundamentals">Web Fundamentals</option>
+						<option value="Python">Python</option>
+						<option value="MEAN">MEAN</option>
+						<option value="Ruby on Rails">Ruby on Rails</option>
+						<option value="iOS">iOS</option>
+						<option value=".Net Core">.Net Core</option>
+				</select>
+			</p>
+			<p>Comment (optional):</p>
+			<textarea name="comments" rows="4" cols="50"></textarea>
+		</div>
+		<div>
+			<button type="Submit">Submit</button>
+		</div>
+		</form>
+	</body>
+</html>
