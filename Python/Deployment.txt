@@ -1,0 +1,4 @@
+Deployment Steps
+
+1. Go to virtual environment (source djangoEnv/bin/activate)
+2. cd into your project directory
