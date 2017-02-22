@@ -1,0 +1,30 @@
+h1 {
+  border-bottom: 2px groove teal;
+  display: inline-block;
+  box-shadow: 5px 0 10px lightgrey;
+}
+
+input {
+  box-shadow: inset 0 0 10px lightgrey;
+  padding: 5px
+}
+
+.add {
+  positon: relative;
+}
+
+.add:hover {
+  bottom: 10px;
+}
+
+.wrapper {
+  margin: 100px 200px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

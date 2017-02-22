@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email Validation</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'email_val/css/styles.css' %}">
+  </head>
+  <body>
+    <div class = "wrapper">
+      <div class="flash-box">
+        {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+              {% endfor %}
+            </ul>
+        {% endif %}
+      </div>
+      <form action="/validate" method="POST">
+        {% csrf_token %}
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" name="submit" value="Add" class='add'>
+      </form>
+      <h1>Valid Emails in DB</h1>
+      {% if emails %}
+          <ul>
+              {% for email in emails %}
+                <li>{{ email.email}} - {[ email.created_at]} - <a href="/remove/{{ email.id }}"><button type ="button" name ="button">Delete Me!</button></a>
+              {% endfor %}
+          </ul>
+      {% endif %}
+    </div>
+  </body>
+</html>
